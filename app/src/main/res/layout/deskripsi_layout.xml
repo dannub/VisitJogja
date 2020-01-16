@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:background="@color/colorPrimaryDark2">
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textColor="@color/colorAccent"
+            android:text="This is Visit Jogja"
+            />
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="ini adalah aplikasi informasi objek wisata di Jojakarta. Jogjakarta memiliki banyak destinasi wisata yang menarik untuk dikunjungi, serta memiliki nilai sejarah yang tinggi. Visit Jogja memberikan informasi deskripsi objek wisata dan denah lokasinya. Silahkan bergabung dan login untuk melihat lebih banyak informasi. Enjoy !!!"
+            />
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <Button
+                android:layout_margin="10dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/buttonstylered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Sign in "/>
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/buttonstyle2"
+                android:layout_height="wrap_content"
+                android:text="Join the club"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
