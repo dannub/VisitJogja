@@ -6,13 +6,11 @@ public class ScreenItem {
     private String Title;
     private String Description;
     private int ScreenImg;
-    private int BackgroundImg;
 
-    public ScreenItem(String title, String description, int screenImg, int backgroundImg) {
+    public ScreenItem(String title, String description, int screenImg) {
         Title = title;
         Description = description;
         ScreenImg = screenImg;
-        BackgroundImg = backgroundImg;
     }
 
     public String getTitle() {
@@ -39,12 +37,5 @@ public class ScreenItem {
         ScreenImg = screenImg;
     }
 
-    public int getBackgroundImg() {
-        return BackgroundImg;
-    }
-
-    public void setBackgroundImg(int backgroundImg) {
-        BackgroundImg = backgroundImg;
-    }
 }
 

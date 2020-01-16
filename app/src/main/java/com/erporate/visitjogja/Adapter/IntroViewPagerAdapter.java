@@ -16,6 +16,7 @@ import com.erporate.visitjogja.Model.ScreenItem;
 import com.erporate.visitjogja.R;
 
 import java.util.List;
+import java.util.Objects;
 
 
 public class IntroViewPagerAdapter extends PagerAdapter {
@@ -33,12 +34,11 @@ public class IntroViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View layoutScreen = inflater.inflate(R.layout.layout_screen,null);
+        @SuppressLint("InflateParams") View layoutScreen = Objects.requireNonNull(inflater).inflate(R.layout.layout_screen,null);
 
         ImageView imgSlide = layoutScreen.findViewById(R.id.intro_img);
         TextView title = layoutScreen.findViewById(R.id.intro_title);
         TextView description = layoutScreen.findViewById(R.id.intro_description);
-        layoutScreen.setBackground(layoutScreen.getResources().getDrawable(mListScreen.get(position).getBackgroundImg()));
 
         Typeface typeface = Typeface.createFromAsset(layoutScreen.getResources().getAssets(),"CenturyGothic.ttf");
 

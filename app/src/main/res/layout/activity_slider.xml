@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:background="@color/colorAccent"
     android:layout_height="match_parent"
-    tools:context=".Activity.SliderActivity">
+    tools:context=".Activity.SliderActivity"
+    tools:ignore="Overdraw">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/screen_viewpager"
@@ -26,13 +27,14 @@
             android:background="#fff"
             android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
             android:drawableTint="@color/gradient_start_color"
-            android:paddingRight="15dip"
-            android:paddingLeft="15dp"
+            android:paddingEnd="15dip"
+            android:paddingStart="15dp"
             android:text="Next"
             android:textColor="@color/gradient_start_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:targetApi="m" />
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_indicator"
@@ -67,6 +69,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/bg_splash" />
 
         <TextView
             android:textSize="16sp"

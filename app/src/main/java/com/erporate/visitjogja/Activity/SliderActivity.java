@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.erporate.visitjogja.Adapter.IntroViewPagerAdapter;
 import com.erporate.visitjogja.MainActivity;
+import com.erporate.visitjogja.Model.Intro;
 import com.erporate.visitjogja.Model.ScreenItem;
 import com.erporate.visitjogja.R;
 import com.google.android.material.tabs.TabLayout;
@@ -31,12 +32,23 @@ public class SliderActivity extends AppCompatActivity {
     private Button btnGetStarted;
     private Animation btnAnim ;
     private TextView tvSkip;
+    private Intro intro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slider);
 
+        intro = new Intro(this);
+
+
+        if (intro.getrestorePrefData()) {
+
+            Intent pilihfoto = new Intent(getApplicationContext(),SplashActivity.class );
+            startActivity(pilihfoto);
+            finish();
+
+        }
 
 
         // ini views
@@ -50,9 +62,9 @@ public class SliderActivity extends AppCompatActivity {
 
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Visit Jogja","Visit Jogja merupakan aplikasi yang berisi tentang lokasi pariwisata yang ada di Jogja",R.drawable.tugu,R.drawable.bg_slider));
-        mList.add(new ScreenItem("Lokasi Bersejarah","Jogja memiliki banyak lokasi bersejarah yang menarik untuk dikunjungi",R.drawable.candi,R.drawable.bg_slider));
-        mList.add(new ScreenItem("Map","Aplikasi Visit Jogja juga memberikan informasi lokasi pariwisata",R.drawable.lokasi,R.drawable.bg_slider));
+        mList.add(new ScreenItem("Visit Jogja","Visit Jogja merupakan aplikasi yang berisi tentang lokasi pariwisata yang ada di Jogja",R.drawable.tugu));
+        mList.add(new ScreenItem("Lokasi Bersejarah","Jogja memiliki banyak lokasi bersejarah yang menarik untuk dikunjungi",R.drawable.candi));
+        mList.add(new ScreenItem("Map","Aplikasi Visit Jogja juga memberikan informasi lokasi pariwisata",R.drawable.lokasi));
 
         // setup viewpager
         screenPager =findViewById(R.id.screen_viewpager);
@@ -134,6 +146,7 @@ public class SliderActivity extends AppCompatActivity {
                 // also we need to save a boolean value to storage so next time when the user run the app
                 // we could know that he is already checked the intro screen activity
                 // i'm going to use shared preferences to that process
+                intro.setrestorePrefData(true);
                 finish();
 
 
