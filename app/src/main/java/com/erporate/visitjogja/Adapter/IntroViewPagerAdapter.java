@@ -43,6 +43,7 @@ public class IntroViewPagerAdapter extends PagerAdapter {
         Typeface typeface = Typeface.createFromAsset(layoutScreen.getResources().getAssets(),"CenturyGothic.ttf");
 
 
+
         title.setText(mListScreen.get(position).getTitle());
         description.setText(mListScreen.get(position).getDescription());
         imgSlide.setImageResource(mListScreen.get(position).getScreenImg());

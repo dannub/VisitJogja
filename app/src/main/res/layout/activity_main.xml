@@ -15,10 +15,11 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             >
 
+
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
 
                 <ImageView
                     android:id="@+id/image"
@@ -29,6 +30,7 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     app:layout_collapseMode="parallax" />
+
 
                 <TextView
                     android:id="@+id/topbar"
@@ -41,7 +43,7 @@
                     android:paddingEnd="16dp"
                     android:text="Selamat Datang"
                     android:textColor="@color/colorPrimaryDark"
-                    app:layout_collapseMode="pin" />
+                    app:layout_scrollFlags="scroll|enterAlways" />
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -56,6 +58,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:text="Visit Jogja"
+                app:layout_scrollFlags="enterAlways"
                 android:textColor="@android:color/white"
                  />
         </com.google.android.material.appbar.AppBarLayout>
@@ -63,12 +66,24 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:clipToPadding="false"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <include layout="@layout/deskripsi_layout"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
+                <include
+                    layout="@layout/deskripsi_layout" />
+
+                <include
+                    layout="@layout/recyclerview_wisata_layout"
+                    />
+
+
+            </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
 

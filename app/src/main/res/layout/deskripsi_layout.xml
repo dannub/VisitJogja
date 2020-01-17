@@ -10,13 +10,15 @@
         android:background="@color/colorPrimaryDark2">
         <TextView
             android:id="@+id/judul"
-            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="35sp"
             android:textColor="@color/colorAccent"
             android:text="This is Visit Jogja"
             />
         <TextView
+            android:textAlignment="center"
             android:id="@+id/deskripsi"
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
