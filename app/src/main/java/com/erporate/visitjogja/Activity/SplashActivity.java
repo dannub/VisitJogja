@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.erporate.visitjogja.MainActivity;
 import com.erporate.visitjogja.R;
 import com.google.firebase.auth.FirebaseAuth;
 

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -13,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.erporate.visitjogja.Adapter.IntroViewPagerAdapter;
-import com.erporate.visitjogja.MainActivity;
 import com.erporate.visitjogja.Model.Intro;
 import com.erporate.visitjogja.Model.ScreenItem;
 import com.erporate.visitjogja.R;

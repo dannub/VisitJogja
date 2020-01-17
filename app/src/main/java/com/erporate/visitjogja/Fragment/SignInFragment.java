@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.erporate.visitjogja.Activity.RegisterActivity;
-import com.erporate.visitjogja.MainActivity;
+import com.erporate.visitjogja.Activity.MainActivity;
 import com.erporate.visitjogja.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
