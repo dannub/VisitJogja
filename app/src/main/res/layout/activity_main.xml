@@ -31,7 +31,7 @@
                     app:layout_collapseMode="parallax" />
 
                 <TextView
-                    android:id="@+id/bottombar"
+                    android:id="@+id/topbar"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:background="@color/fbutton_color_transparent"
@@ -46,7 +46,7 @@
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
             <TextView
-                android:id="@+id/topbar"
+                android:id="@+id/bottombar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/colorPrimaryDark"

@@ -8,8 +8,10 @@ import android.os.Handler;
 
 import com.erporate.visitjogja.MainActivity;
 import com.erporate.visitjogja.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +30,7 @@ public class SplashActivity extends AppCompatActivity {
                 SplashActivity.this.finish();
             }
         }, splash);
+        MainActivity.currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
     }
 }

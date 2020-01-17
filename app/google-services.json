@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "350401660877",
+    "firebase_url": "https://visitjogja-23627.firebaseio.com",
+    "project_id": "visitjogja-23627",
+    "storage_bucket": "visitjogja-23627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350401660877:android:cb627689a16e704b31e684",
+        "android_client_info": {
+          "package_name": "com.erporate.visitjogja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350401660877-p8vd8clq9m7l0oh1p4bekvpvrn22sbmb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.erporate.visitjogja",
+            "certificate_hash": "612644f0b25099ce03aa0cee6955f647823c8726"
+          }
+        },
+        {
+          "client_id": "350401660877-kh1t7ub2hhgs18i710cmo7ubg30q3fh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnNUe5l4gfKhL1Dj0thhXhv01i1sGTc6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350401660877-kh1t7ub2hhgs18i710cmo7ubg30q3fh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

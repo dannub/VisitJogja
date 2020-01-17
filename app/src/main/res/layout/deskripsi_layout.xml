@@ -31,6 +31,7 @@
             android:orientation="horizontal"
             android:layout_gravity="center">
             <Button
+                android:id="@+id/signin"
                 android:layout_margin="10dp"
                 android:textColor="@color/colorAccent"
                 android:background="@drawable/buttonstylered"
@@ -39,6 +40,7 @@
                 android:text=" Sign in "/>
             <Button
                 android:layout_margin="10dp"
+                android:id="@+id/signup"
                 android:layout_width="wrap_content"
                 android:textColor="@color/colorAccent"
                 android:background="@drawable/buttonstyle2"
