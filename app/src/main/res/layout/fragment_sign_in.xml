@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
     tools:context=".Fragment.SignInFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/Form"
@@ -18,9 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <androidx.constraintlayout.widget.ConstraintLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingLeft="20sp"
@@ -46,19 +41,18 @@
                     />
 
 
-
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_gravity="center"
-                    app:layout_constraintBottom_toTopOf="@id/btn_signin"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="275dp"
+                    android:id="@+id/form"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/form"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/btn_signin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView">
 
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -66,65 +60,60 @@
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        >
+                        android:layout_marginTop="20dp">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:layout_marginTop="5dp"
+                            android:id="@+id/txtemail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
                             android:background="@drawable/edittxtround"
-                            android:padding="12dp"
                             android:hint="Email"
-                            android:id="@+id/txtemail"
                             android:inputType="text"
                             android:maxLines="3"
-                            />
+                            android:padding="12dp" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/layoutpassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:passwordToggleEnabled="true"
                         android:layout_marginTop="20dp"
-                        >
+                        app:passwordToggleEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:layout_marginTop="10dp"
+                            android:id="@+id/txtpassword"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="12dp"
-                            android:hint="Password"
+                            android:layout_marginTop="10dp"
                             android:background="@drawable/edittxtround"
+                            android:hint="Password"
                             android:inputType="textPassword"
-                            android:id="@+id/txtpassword"
-                            android:maxLines="1"/>
+                            android:maxLines="1"
+                            android:padding="12dp" />
                     </com.google.android.material.textfield.TextInputLayout>
-
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:textAlignment="viewEnd"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="14dp"
-                            android:textColor="@color/colorAccent"
                             android:id="@+id/forgot_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:shadowColor="@color/colorPrimaryDark2"
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="0.01"
                             android:text="Forgot Password"
-                            />
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
-
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -233,6 +222,15 @@
                     app:layout_constraintTop_toTopOf="@id/textView2"
                     />
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
