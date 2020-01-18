@@ -1,5 +1,6 @@
 package com.erporate.visitjogja.Adapter;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.transition.AutoTransition;
@@ -27,6 +28,8 @@ import com.erporate.visitjogja.Activity.MainActivity;
 import com.erporate.visitjogja.Activity.MapsActivity;
 import com.erporate.visitjogja.Model.Wisata;
 import com.erporate.visitjogja.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 
 import java.util.List;
 
@@ -35,6 +38,7 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.Viewholder
 
     private List<Wisata> wisataList;
     private  int lastPosition = -1;
+    private static final int ERROR_DIALOG_REQUEST =9001;
 
 
     public WisataAdapter(List<Wisata> wisataList) {
@@ -104,9 +108,13 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.Viewholder
            location.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   Intent mainActivityIntent = new Intent(itemView.getContext(), MapsActivity.class);
-                   itemView.getContext().startActivity(mainActivityIntent);
 
+                   if (isServiceOK()) {
+                       Intent mapsActivityIntent = new Intent(itemView.getContext(), MapsActivity.class);
+                       mapsActivityIntent.putExtra("nama",namaText);
+                       mapsActivityIntent.putExtra("alamat",alamatText);
+                       itemView.getContext().startActivity(mapsActivityIntent);
+                   }
                }
            });
             arrowBtn.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +137,22 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.Viewholder
                 }
             });
 
+        }
+
+        public  boolean isServiceOK(){
+            Log.i("hasil","isServiceOK: checking google service version");
+            int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable((Activity) itemView.getContext());
+            if (available == ConnectionResult.SUCCESS){
+                Log.d("hasil","isServiceOK: Google Play Service is working");
+                return true;
+            }else if(GoogleApiAvailability.getInstance().isUserResolvableError(available)){
+                Log.d("hasil","isServiceOK: an error occured but we can fix");
+                Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog((Activity) itemView.getContext(),available,ERROR_DIALOG_REQUEST);
+                dialog.show();
+            }else {
+                Toast.makeText(itemView.getContext(), "You cant make map request", Toast.LENGTH_SHORT).show();
+            }
+            return false;
         }
 
 

@@ -1,40 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MapsActivity">
+    tools:context=".Activity.MapsActivity"
+    >
+
+
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="example.com.mapexample.MapsActivity">
-        <LinearLayout
+        android:layout_height="match_parent"/>-->
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="10dp"
+            android:backgroundTint="@color/colorAccent2"
+            android:background="@drawable/slider_background"
+            android:id="@+id/rellayout1"
+            >
 
-            <EditText
-                android:layout_width="248dp"
+            <TextView
+                android:id="@+id/nama_tempat"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
-                android:layout_weight="0.5"
-                android:inputType="textPersonName"
-                android:hint="Search Location" />
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:textColor="@color/colorAccent"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:onClick="searchLocation"
-                android:text="Search" />
 
-        </LinearLayout>
 
-    </fragment>
+<!--           <ImageView-->
+<!--               android:layout_width="15dp"-->
+<!--               android:layout_height="15dp"-->
+<!--               android:id="@+id/ic_magnify"-->
+<!--               android:src="@drawable/ic_search"-->
+<!--               android:layout_centerVertical="true"-->
+<!--               android:layout_marginLeft="10dp"/>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_toRightOf="@id/ic_magnify"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/colorAccent1"-->
+<!--                android:id="@+id/input_search"-->
+<!--                android:hint="Enter Address, City or Zip Code"-->
+<!--                />-->
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>
